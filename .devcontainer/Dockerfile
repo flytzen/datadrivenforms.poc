@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/javascript-node
+FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:16
 
 # Start: NPM changed the rules about global installs...
 # https://stackoverflow.com/questions/44633419/no-access-permission-error-with-npm-global-install-on-docker-image
