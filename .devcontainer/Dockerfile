@@ -18,4 +18,4 @@ RUN mkdir -p "${NPM_CONFIG_PREFIX}/lib"
 RUN npm --global config set user "${USER}"
 # End: NPM changed the rules about global installs...
 
-RUN npm install -g @azure/static-web-apps-cli
+RUN npm install -g @azure/static-web-apps-cli && npm install -g azure-functions-core-tools@4
