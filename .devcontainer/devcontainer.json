@@ -1,0 +1,14 @@
+{
+    "name": "app",
+	"dockerComposeFile": ["../docker-compose.yml"],
+	"service": "app",
+	"workspaceFolder": "/workspace/",
+	
+    "extensions": [
+		"ms-azuretools.vscode-azurestaticwebapps",
+		"pflannery.vscode-versionlens"
+	],
+	// "postCreateCommand": "npm install",
+    "remoteUser": "node",
+	"shutdownAction": "none"
+}

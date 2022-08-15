@@ -1,0 +1,28 @@
+version: '3'
+services:
+  app:
+    build: ./.devcontainer
+    volumes: 
+      - .:/workspace:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    links:
+      - azurite
+    ports:
+      - 4280:4280
+  # func:
+  #   build: ./func/.devcontainer
+  #   volumes: 
+  #   - .:/workspace:cached
+  #   command: /bin/sh -c "while sleep 1000; do :; done"
+  #   ports:
+  #     - 7071:7071
+  #   links:
+  #     - azurite
+  azurite:
+    image: "mcr.microsoft.com/azure-storage/azurite"
+    volumes:
+      - ./azurite:/data
+    ports:
+        - "10000:10000"
+        - "10001:10001"
+        - "10002:10002"
